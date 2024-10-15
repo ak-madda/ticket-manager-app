@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th>Ticket ID</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ticket of tickets">
+      <td>{{ ticket.ticketId }}</td>
+      <td>{{ ticket.description }}</td>
+      <td>{{ ticket.status }}</td>
+      <td>{{ ticket.date }}</td>
+      <td>
+        <button (click)="editTicket(ticket)">Edit</button>
+        <button (click)="deleteTicket(ticket.ticketId)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
